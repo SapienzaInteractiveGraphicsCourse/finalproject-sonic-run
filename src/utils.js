@@ -15,10 +15,18 @@ var loader = new THREE.GLTFLoader();
 loader.crossOrigin = true;
 
 var loader1 = new THREE.TextureLoader();
-function loadTexture(url) {
-  return new Promise(resolve => {
-    new THREE.TextureLoader().load(url, resolve);
-  });
+
+function texture_promise(loader , onProgress) {
+    function promiseLoader(url){
+        return New Promise( (resolve, reject) => {
+            loader.load(url, resolve, onProgress, reject);
+        });
+    }
+    
+    return {
+        originalLoader: loader,
+        load: promiseLoader,
+  };
 }
 
 
