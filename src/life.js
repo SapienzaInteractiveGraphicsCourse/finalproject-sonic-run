@@ -33,7 +33,7 @@ life4.style.height = 40 + 'px';
 life4.style.top = 20 + 'px';
 life4.style.right = 40 + 'px';
 
-loader.load( './../Models/heart/scene.gltf', function ( gltf ) {
+loader.load( './../models/heart/scene.gltf', function ( gltf ) {
     heart = gltf.scene;
     heart.name = "heart";
     heart.visible = true;
