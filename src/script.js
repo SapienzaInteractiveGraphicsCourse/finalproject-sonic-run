@@ -73,7 +73,12 @@ function init() {
   // Initialization of the world
   spawnClouds(0);
   treesInit();  
-  //scene.add(side1);
+  
+  const l = texture_promise(new THREE.TextureLoader() );
+  l.load('./../Images/grass1.jpg')
+    .then(load_grass)
+  
+  scene.add(side1);
   scene.add(side2);
   scene.add(side3);
   scene.add(side4);
