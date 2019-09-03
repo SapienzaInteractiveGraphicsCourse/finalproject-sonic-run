@@ -1,21 +1,25 @@
 var cloud;
-loader1.load('./../Images/cloud10.png', function(texture) {
-    texture.wrapS = THREE.RepeatWrapping;
-    texture.wrapT = THREE.RepeatWrapping;
-      
-    var times_horizontal = 1; 
-    var times_vert = 1; 
-      
-    var objGeometry = new THREE.PlaneGeometry( 10 , 10 , 32);
-    texture.repeat.set(times_horizontal, times_vert);
-    var objMaterial = new THREE.MeshPhongMaterial({
-        map: texture,
-        side: THREE.DoubleSide,
-        shading: THREE.FlatShading,
-        transparent: true,
-    });
-    cloud = new THREE.Mesh(objGeometry, objMaterial);
-}, null , null);
+
+const cloader = texture_promise(new THREE.TextureLoader());
+
+cloader.load('./../Images/cloud10.png').then( (texture) => {
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
+    
+  var times_horizontal = 1; 
+  var times_vert = 1; 
+    
+  var objGeometry = new THREE.PlaneGeometry( 10 , 10 , 32);
+  texture.repeat.set(times_horizontal, times_vert);
+  var objMaterial = new THREE.MeshPhongMaterial({
+      map: texture,
+      side: THREE.DoubleSide,
+      shading: THREE.FlatShading,
+      transparent: true,
+  });
+  cloud = new THREE.Mesh(objGeometry, objMaterial);
+  spawnClouds(0);
+});
 
 var max_clouds = 50;
 var clouds = new Array();
