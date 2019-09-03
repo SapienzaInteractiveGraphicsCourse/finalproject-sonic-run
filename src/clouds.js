@@ -37,7 +37,7 @@ function cloudsCollision(x, y, z){
 function spawnClouds(start){
   var aux = start;
   for(i = 0; i < max_clouds; i++){
-    if(cloud == 'undefined') break;
+    if(typeof(cloud) == 'undefined' || cloud==null) break;
     var clone = cloud.clone();
     var x = Math.floor(Math.random()*180 - 90);
     var y = Math.floor(Math.random()* 5 + 16);
