@@ -71,11 +71,9 @@ function init() {
 
 
   // Initialization of the world
-  spawnClouds(0);
-  treesInit();  
+  spawnClouds(0); 
   
   const l = texture_promise(new THREE.TextureLoader() );
-  
   function callthis(){
     l.load('./../Images/grass1.jpg').then((texture) => {
       texture.wrapS = THREE.RepeatWrapping;
@@ -90,16 +88,16 @@ function init() {
       side2 = createSide(objGeometry,texture, -53 , 0);
       side3 = createSide(objGeometry,texture, 53 , 250);
       side4 = createSide(objGeometry,texture,-53 , 250);
-      
+
       scene.add(side1);
       scene.add(side2);
       scene.add(side3);
       scene.add(side4);
-    })
+    });
   }
   
   callthis();
-
+  
 }
 
 //loading models
