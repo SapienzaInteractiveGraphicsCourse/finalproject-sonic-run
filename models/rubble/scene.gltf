@@ -1,0 +1,565 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1460,
+      "max": [
+        0.73731064796447754,
+        1.4390525817871094,
+        1.9060893058776855
+      ],
+      "min": [
+        -0.73729336261749268,
+        -1.7392846345901489,
+        -1.6429555416107178
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 17520,
+      "componentType": 5126,
+      "count": 1460,
+      "max": [
+        0.99981957674026489,
+        0.99909132719039917,
+        0.99887251853942871
+      ],
+      "min": [
+        -0.9997832179069519,
+        -0.99945080280303955,
+        -0.99983698129653931
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1460,
+      "max": [
+        0.99791014194488525,
+        0.99919474124908447,
+        0.99845832586288452,
+        1
+      ],
+      "min": [
+        -0.99893105030059814,
+        -0.9996795654296875,
+        -0.99891954660415649,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1460,
+      "max": [
+        0.99981307983398438,
+        0.94026964902877808
+      ],
+      "min": [
+        0.00018689538410399109,
+        0.00018689538410399109
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 7464,
+      "max": [
+        1459
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 35040,
+      "componentType": 5126,
+      "count": 1908,
+      "max": [
+        0.17822623252868652,
+        -1.8068408966064453,
+        -1.0903174877166748
+      ],
+      "min": [
+        -2.9677505493164062,
+        -7.2130179405212402,
+        -6.5115480422973633
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 57936,
+      "componentType": 5126,
+      "count": 1908,
+      "max": [
+        0.99962466955184937,
+        0.99609428644180298,
+        0.99958294630050659
+      ],
+      "min": [
+        -0.99918943643569946,
+        -0.99866414070129395,
+        -0.99925249814987183
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 23360,
+      "componentType": 5126,
+      "count": 1908,
+      "max": [
+        0.99786555767059326,
+        0.99798452854156494,
+        0.99364286661148071,
+        1
+      ],
+      "min": [
+        -0.99869751930236816,
+        -0.99917292594909668,
+        -0.95685940980911255,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 11680,
+      "componentType": 5126,
+      "count": 1908,
+      "max": [
+        0.99974948167800903,
+        0.98794364929199219
+      ],
+      "min": [
+        0.0002504489675629884,
+        0.0002504489675629884
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 29856,
+      "componentType": 5125,
+      "count": 9402,
+      "max": [
+        1907
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 80832,
+      "componentType": 5126,
+      "count": 683,
+      "max": [
+        1.29976487159729,
+        3.2587540149688721,
+        2.5736145973205566
+      ],
+      "min": [
+        0.34360432624816895,
+        1.3071476221084595,
+        0.53089118003845215
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 89028,
+      "componentType": 5126,
+      "count": 683,
+      "max": [
+        0.99996423721313477,
+        0.99919569492340088,
+        0.9941362738609314
+      ],
+      "min": [
+        -0.99932461977005005,
+        -0.99978905916213989,
+        -0.97683519124984741
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 53888,
+      "componentType": 5126,
+      "count": 683,
+      "max": [
+        0.99884241819381714,
+        0.99905151128768921,
+        0.99677014350891113,
+        1
+      ],
+      "min": [
+        -0.99745184183120728,
+        -0.98518621921539307,
+        -0.99765461683273315,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 26944,
+      "componentType": 5126,
+      "count": 683,
+      "max": [
+        0.99979758262634277,
+        0.90727651119232178
+      ],
+      "min": [
+        0.00020246955682523549,
+        0.00020246955682523549
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 67464,
+      "componentType": 5125,
+      "count": 3126,
+      "max": [
+        682
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "v124entkl (https://sketchfab.com/v124entkl)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/models/b885e4273ebe4a75ba0e77dfdcc06c62",
+      "title": "Low poly Rubble"
+    },
+    "generator": "Sketchfab-4.14.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 79968,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32408,
+      "byteOffset": 79968,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 97224,
+      "byteOffset": 112376,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 64816,
+      "byteOffset": 209600,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 274416,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Steine_mittel_normal.png"
+    },
+    {
+      "uri": "textures/Steine_mittel_baseColor.png"
+    },
+    {
+      "uri": "textures/steine_klein_normal.png"
+    },
+    {
+      "uri": "textures/steine_klein_baseColor.png"
+    },
+    {
+      "uri": "textures/steine_gro_normal.png"
+    },
+    {
+      "uri": "textures/steine_gro_baseColor.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Steine_mittel",
+      "normalTexture": {
+        "index": 0,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.9921875
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "steine_gro",
+      "normalTexture": {
+        "index": 4,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 5,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95770514949999996
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "steine_klein",
+      "normalTexture": {
+        "index": 2,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 3,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95770514949999996
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "steine_mittel_lp.003_Steine_mittel_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "steine_mittel_lp.003_steine_gro��_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "steine_mittel_lp.003_steine_klein_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "de601b24d0d6419aa68bd86a8957a350.fbx"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5,
+        6,
+        7
+      ],
+      "matrix": [
+        -10.273133397266919,
+        -45.005256612536648,
+        -13.346358253847882,
+        0,
+        -26.272354575925728,
+        16.834389283364761,
+        -36.544546243824072,
+        0,
+        38.901962744043523,
+        -0.51581581683551037,
+        -28.204744869264317,
+        0,
+        0,
+        0.29307436943054199,
+        -73.698394775390625,
+        1
+      ],
+      "name": "steine_mittel_lp.003"
+    },
+    {
+      "mesh": 0,
+      "name": "steine_mittel_lp.003_Steine_mittel_0"
+    },
+    {
+      "mesh": 1,
+      "name": "steine_mittel_lp.003_steine_gro��_0"
+    },
+    {
+      "mesh": 2,
+      "name": "steine_mittel_lp.003_steine_klein_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}
+
