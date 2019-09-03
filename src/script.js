@@ -90,15 +90,16 @@ function init() {
       side2 = createSide(objGeometry,texture, -53 , 0);
       side3 = createSide(objGeometry,texture, 53 , 250);
       side4 = createSide(objGeometry,texture,-53 , 250);
+      
+      scene.add(side1);
+      scene.add(side2);
+      scene.add(side3);
+      scene.add(side4);
     })
   }
   
   callthis();
-  
-  scene.add(side1);
-  scene.add(side2);
-  scene.add(side3);
-  scene.add(side4);
+
 }
 
 //loading models
