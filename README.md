@@ -2,7 +2,9 @@
 
 Sonic Run game, developed with WebGl and Three.js.
 
-### How to Run the Game
+To run the game on GitHub pages click <a href='https://sapienzainteractivegraphicscourse.github.io/finalproject-sonic-run/'>HERE</a>.
+
+### How to Run the Game (out of GitHub Pages)
 
 Clone the folder or download it, in the latter case you will need to unzip the folder.
 
