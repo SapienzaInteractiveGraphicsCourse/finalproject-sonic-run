@@ -15,5 +15,11 @@ var loader = new THREE.GLTFLoader();
 loader.crossOrigin = true;
 
 var loader1 = new THREE.TextureLoader();
+function loadTexture(url) {
+  return new Promise(resolve => {
+    new THREE.TextureLoader().load(url, resolve);
+  });
+}
+
 
 var scene;
