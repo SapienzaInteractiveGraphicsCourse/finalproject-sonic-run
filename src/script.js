@@ -77,8 +77,7 @@ function init() {
   const l = texture_promise(new THREE.TextureLoader() );
   
   function callthis(){
-    l.load('./../Images/grass1.jpg')
-      .then((texture) => {
+    l.load('./../Images/grass1.jpg').then((texture) => {
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.RepeatWrapping;
 
