@@ -13,7 +13,7 @@ Go to src, open **index.html** with your browser.
 As stated in the report, section 3.1.2, Edge (IE) works fine. Safari can work after disabling the origin restrictions in the Developer Menu. 
  
 
-### The game is totally offline, no score is saved and any problem can only be related to RAM and Browser comptability, not to your internet connection. 
+### The game does not save score, internet connections is required only for the libraries used. Problems are most likely related to RAM and Browser comptability. 
 
 
 
