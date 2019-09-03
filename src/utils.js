@@ -18,7 +18,7 @@ var loader1 = new THREE.TextureLoader();
 
 function texture_promise(loader , onProgress) {
     function promiseLoader(url){
-        return New Promise( (resolve, reject) => {
+        return new Promise( (resolve, reject) => {
             loader.load(url, resolve, onProgress, reject);
         });
     };
