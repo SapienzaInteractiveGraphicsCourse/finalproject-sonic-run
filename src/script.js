@@ -73,7 +73,7 @@ function init() {
   // Initialization of the world
   spawnClouds(0);
   treesInit();  
-  scene.add(side1);
+  //scene.add(side1);
   scene.add(side2);
   scene.add(side3);
   scene.add(side4);
