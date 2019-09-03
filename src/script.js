@@ -68,11 +68,6 @@ function init() {
   light.shadow.camera.far = 8000;     // default
   light.shadow.camera.fov = 30;
 
-
-
-  // Initialization of the world
-  spawnClouds(0); 
-  
   const l = texture_promise(new THREE.TextureLoader() );
   function callthis(){
     l.load('./../Images/grass1.jpg').then((texture) => {
