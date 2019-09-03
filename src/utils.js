@@ -21,7 +21,7 @@ function texture_promise(loader , onProgress) {
         return New Promise( (resolve, reject) => {
             loader.load(url, resolve, onProgress, reject);
         });
-    }
+    };
     
     return {
         originalLoader: loader,
