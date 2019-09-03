@@ -36,6 +36,7 @@ l.load('./../Images/grass1.jpg')
   .then(load_grass)
 /*loader1.load('./../Images/grass1.jpg', load_grass);
 
+*/
 function load_grass(texture){
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
@@ -49,7 +50,7 @@ function load_grass(texture){
   side2 = createSide(objGeometry,texture, -53 , 0);
   side3 = createSide(objGeometry,texture, 53 , 250);
   side4 = createSide(objGeometry,texture,-53 , 250);
-} */
+} 
 
 
 loader.load('./../models/cow/scene.gltf', function(gltf) {
