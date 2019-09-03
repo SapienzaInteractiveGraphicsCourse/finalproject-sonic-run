@@ -44,7 +44,9 @@ function load_grass(texture){
   texture.repeat.set(times_horizontal, times_vert);
 
   side1 = createSide(objGeometry,texture, 53 , 0);
-  scene.add(side1);
+  s = new THREE.Group();
+  s.add(side1);
+  scene.add(s);
   side2 = createSide(objGeometry,texture, -53 , 0);
   side3 = createSide(objGeometry,texture, 53 , 250);
   side4 = createSide(objGeometry,texture,-53 , 250);
