@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Sonic Run </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body onload="loadingFunction()">
+
+<div class="container" id='loading'>
+  <div class="flex">
+  <div class="loader">
+  </div>
+  </div>
+  <div class="load-text">
+  Loading...
+  </div>
+  </div>
+<div class='canvas_three' id='game' style="display:none"></div>
+
+<script>
+    function loadingFunction(){
+      document.getElementById("loading").style.display = "none";
+      document.getElementById('game').style.display = 'initial';
+    }
+</script>
+    
+<audio autoplay id="bgAudio" loop="true">
+  <source src="../audio/Sonic Generations - Green Hill Zone Classic.mp3" type="audio/mp3">
+</audio>
+    
+<script>
+  var audio = document.getElementById("bgAudio");
+  audio.volume = 0.4 ;
+</script>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script>
+console.clear();
+
+jQuery(document).keydown(function(event) {
+    // Zoom disabled
+    if((event.ctrlKey || event.metaKey) && event.which == 187) {
+        event.preventDefault();
+        return false;
+    }
+    if((event.ctrlKey || event.metaKey) && event.which == 189) {
+        event.preventDefault();
+        return false;
+    }
+});
+</script>
+<script src="https://unpkg.com/three@0.87.1/build/three.js"></script>
+<script src="https://unpkg.com/three@0.87.1/examples/js/controls/OrbitControls.js"></script>
+<script src="https://unpkg.com/three@0.87.1/examples/js/loaders/GLTFLoader.js"></script>
+    
+<script  src="./utilities/ImprovedNoise.js"></script>
+<script  src="./utils.js"></script>
+<script  src='./sonic.js'></script>
+<script  src='./tails.js'></script>
+<script  src="./eggman.js"></script>
+<script  src='./robotenemy.js'></script>
+<script  src="./rings.js"></script>
+<script  src="./obstacles.js"></script>
+<script  src="./life.js"></script>
+<script  src="./shield.js"></script>
+<script  src="./clouds.js"></script>
+<script  src='./sides.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>

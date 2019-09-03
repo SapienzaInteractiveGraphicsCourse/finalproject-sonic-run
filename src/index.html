@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="co-authored by Gianmarco Roggiolani, Valerio Nicolanti">
+	<title>Sonic Run</title>
+
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="css/index.css" rel="stylesheet">
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div id="carouselExampleIndicators" style="padding-top: 0px;" class="carousel slide"  data-interval="false" data-ride="carousel">
+      <ol class="carousel-indicators" style="position: absolute; left: -5%;">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide One -->
+        <div class="carousel-item active min-vh-100" style="background-image: url(./../Images/wallpaper7.png);">
+
+        	<div class="intro">
+	            <p style="position: absolute;top:10%;left:35%;"> <img width ="110%" height="110%" src='./../Images/logo.png' /> </p>
+	                  
+		        <div class='row'>
+		          <div class='column rightcolumn'>
+		            <div class='instructions'>
+		              <h3 style="position: absolute;left: 43.7%;top:35%;font-size:x-large;" class="howtoplay">How to Play: </h3>
+		              <img style="position: absolute;top:40%;left:41%;" src='./../Images/commands.png' alt='Game control commands.' width='250px'/>
+		              <h3 style = "position: absolute; top: 60%; left: 43.2%;  color: black; font-size:large;">  Change difficulty: </h3>
+		              <a id="left" style = "position: absolute; top: 63%; left: 41%;" href="#" class="left round" onclick="lowerDifficulty()">&#8249;</a>
+		              <h4 style = "position: absolute; top: 64%; left: 45.7%; color:black;font-size:large;" id="diff">Normal</h4>
+		              <a id="right" style = "position: absolute; top: 63%; left: 52%;" href="#" class="right round" onclick="increaseDifficulty()">&#8250;</a>
+		              <button style="position: absolute; top: 70%; left: 40%;" class="b" onclick = "start()"> <h3 style="text-align: center; font-size:x-large; color: black;"> Play the Game! </h3> </button>
+		            </div>
+		          </div>
+		        </div>          
+
+        	</div>
+	        <div style="color:black; position: absolute; left: 10%;" class="carousel-caption d-none d-md-block">
+	        </div>
+        </div>
+        <!-- End Slide One -->  
+
+
+        <!-- Slide Two --> 
+        <div id="car" class="carousel-item min-vh-100" style="background-color: rgba(238,83,78,1);">
+
+          <img style="position: absolute; top: 5%; left: 19%; border:5px solid black; max-width: 65%; max-height: 60%;" width="auto" height="auto" src="../Images/game.png"/>   
+          
+          <!--EGGMAN-->
+          <a style="position: absolute;left: 40.5%;top: 3%;" href="#" class="tool" data-toggle="tooltip" data-placement="bottom" title="Watch out for you mortal enemy, Eggman! When he is coming for you, you will hear him and you will be warned with a red signal on the ground which moves along his trajectory so that you can avoid him even when he's behind you. He will repeatedly try to hit you with his huge weapon, to escape the danger you need to dodge left or right at the right time!"><img width = "135" height = "110" src="../Images/square.png"/></a>
+
+          <!--TAILS-->
+          <a style="position: absolute;left: 38.5%;top: 23%;" href="#" class="tool" data-toggle="tooltip" data-placement="bottom" title="Your friend has been corrupted, Eggman has taken Tails by his side! Don't be fooled and dodge him, or he is gonna hit you hard."><img width = "135" height = "110" src="../Images/square.png"/></a>
+
+          <!--ROBOT-->
+          <a style="position: absolute;left: 47.3%;top: 9%;" href="#" class="tool" data-toggle="tooltip" data-placement="bottom" title="The evil scientist has developed a new weapon to beat you, this robot will be targeting you over and over, you will be warned by his red laser. Pay attention, those projectiles are very fast!"><img width = "135" height = "110" src="../Images/square.png"/></a>
+
+          <!-- SHIELD -->
+          <a style="position: absolute;left: 20%;top: 66%;" href="#" class="tool" data-toggle="tooltip" data-placement="top" title="Pick up this shield to gain invulnerability for some time, no one will be able to hurt you, but be careful: the shield won't last long."><img width = "180px" height = "180px" src="../Images/shield_1.png"/></a>
+
+          <!-- HEART -->
+          <a style="position: absolute;left: 41%;top: 65%;" href="#" class="tool" data-toggle="tooltip" data-placement="top" title="You loose hearts when you hit an obstacle or when Eggman hits you. After you've been hit you're invulnerable for some seconds, use that time to escape from every danger! When you drop to 0 hearts it will be game over, taking a heart will restore one of them letting you to absorb one more hit from the enemies!"><img width = "230px" height = "200px" src="../Images/heart_1.png"/></a>
+
+          <!-- RING -->
+          <a style="position: absolute;left: 65%;top: 65%;" href="#" class="tool" data-toggle="tooltip" data-placement="top" title="Your goal is to get as much score as you can collecting these coins. The coins will never be isolated but they spawn in rows, so go with the flow of the run to get them all! You can see your current score in the upper left corner."><img width = "230px" height = "200px" src="../Images/ring_1.png"/></a>
+
+
+          <div style="position: absolute; left: 10%;" class="carousel-caption d-none d-md-block">
+            <h3 style="font-size: x-large;">Tutorial</h3>
+          </div>
+        </div>
+      </div>
+      <!-- End Slide Two --> 
+
+
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $('[data-toggle="tooltip"]').tooltip();   
+	});
+
+	jQuery(document).keydown(function(event) {
+	    // Zoom disabled
+	    if((event.ctrlKey || event.metaKey) && event.which == 187) {
+	        event.preventDefault();
+	        return false;
+	    }
+	    if((event.ctrlKey || event.metaKey) && event.which == 189) {
+	        event.preventDefault();
+	        return false;
+	    }
+	});
+</script>
+<script type="text/javascript">
+
+function lowerDifficulty(){
+	var text = document.getElementById('diff').innerHTML;
+	if(text == "Normal"){ 
+	  document.getElementById('diff').innerHTML = "Easy";
+	  document.getElementById("left").style.backgroundColor = "white";
+	}
+	else if (text == "Hard") document.getElementById('diff').innerHTML = "Normal";
+	else if (text == "Extreme"){
+	  document.getElementById('diff').innerHTML = "Hard";
+	  document.getElementById("right").style.backgroundColor = "#0506DB";
+	}
+}
+
+function increaseDifficulty(){
+	var text = document.getElementById('diff').innerHTML;
+	if(text == "Easy"){
+	  document.getElementById('diff').innerHTML = "Normal";
+	  document.getElementById("left").style.backgroundColor = "#0506DB";
+	}
+	else if (text == "Normal") document.getElementById('diff').innerHTML = "Hard";
+	else if (text == "Hard"){ 
+	  document.getElementById('diff').innerHTML = "Extreme";
+	  document.getElementById("right").style.backgroundColor = "white";
+	}
+}
+
+function start(){
+	var text = document.getElementById('diff').innerHTML;
+	if(text == "Normal") window.location.href = "./game.html?max_hearts=3";
+	else if(text == "Easy") window.location.href = "./game.html?max_hearts=4";
+	else if(text == "Hard") window.location.href = "./game.html?max_hearts=2";
+	else if(text == "Extreme") window.location.href = "./game.html?max_hearts=1";
+}
+</script>
+
+</body>
+</html>
