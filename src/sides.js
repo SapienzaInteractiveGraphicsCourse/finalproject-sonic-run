@@ -31,9 +31,6 @@ var SideConfig = {
 
 };
 
-const l = texture_promise(new THREE.TextureLoader() );
-l.load('./../Images/grass1.jpg')
-  .then(load_grass)
 /*loader1.load('./../Images/grass1.jpg', load_grass);
 
 */
@@ -51,6 +48,10 @@ function load_grass(texture){
   side3 = createSide(objGeometry,texture, 53 , 250);
   side4 = createSide(objGeometry,texture,-53 , 250);
 } 
+
+const l = texture_promise(new THREE.TextureLoader() );
+l.load('./../Images/grass1.jpg')
+  .then(load_grass)
 
 
 loader.load('./../models/cow/scene.gltf', function(gltf) {
