@@ -193,6 +193,7 @@ function createSide(floorGeometry,texture,posx, posz){
 
 function treesInit(){
     for(var m = 0; m < max_trees;){
+        if(typeof(tree1) == 'undefined') break;
         var road_side = (Math.random() > 0.5 ? -1 : 1);
         var px = road_side*Math.random()*10 +(road_side == -1 ? -3 : 3);
         var pz = Math.random()*tree_dist + 10;
