@@ -78,7 +78,7 @@ function init() {
   
   function callthis(){
     l.load('./../Images/grass1.jpg')
-      .then((texture) = > {
+      .then((texture) => {
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.RepeatWrapping;
 
