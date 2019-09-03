@@ -4,12 +4,7 @@ var max_trees = 30;
 var tree_dist = 50;
 var min_tree_dist = 20;
 
-var objGeometry = new THREE.PlaneGeometry( 3 , 3 , 32);
-var times_horizontal = 1;
-var times_vert = 1;
-
 var p = 0;
-
 
 var SIDE_RES = 20;
 var FLOOR_THICKNESS = 10;
@@ -30,24 +25,6 @@ var SideConfig = {
   MOVE_STEP: 250    //z distance to move before recreating a new floor strip
 
 };
-
-/*loader1.load('./../Images/grass1.jpg', load_grass);
-
-*/
-function load_grass(texture){
-  texture.wrapS = THREE.RepeatWrapping;
-  texture.wrapT = THREE.RepeatWrapping;
-
-  var times_horizontal = 20; 
-  var times_vert = 80; 
-  var objGeometry = new THREE.PlaneGeometry( SideConfig.SIDE_WIDTH, SideConfig.SIDE_DEPTH , SIDE_RES,SIDE_RES );
-  texture.repeat.set(times_horizontal, times_vert);
-
-  side1 = createSide(objGeometry,texture, 53 , 0);
-  side2 = createSide(objGeometry,texture, -53 , 0);
-  side3 = createSide(objGeometry,texture, 53 , 250);
-  side4 = createSide(objGeometry,texture,-53 , 250);
-} 
 
 loader.load('./../models/cow/scene.gltf', function(gltf) {
     cow1 = gltf.scene;
@@ -80,48 +57,53 @@ loader.load('./../models/cow/scene.gltf', function(gltf) {
     action.play();
 });
 
-loader1.load('./../Images/tree.png', function(texture){
-    texture.repeat.set(times_horizontal, times_vert);
+const promiseLoader = texture_promise(new THREE.TextureLoader() );
+
+promise1 = promiseLoader.load( './../Images/tree.png' ).then( (texture) => {
+  texture.repeat.set(1, 1);
     var objMaterial = new THREE.MeshPhongMaterial({
         map: texture,
         side: THREE.DoubleSide,
         shading: THREE.FlatShading,
         transparent: true,
       });
-    tree1 = new THREE.Mesh(objGeometry, objMaterial);
+    tree1 = new THREE.Mesh(new THREE.PlaneGeometry( 3 , 3 , 32), objMaterial);
+});
+promise2 = promiseLoader.load( './../Images/tree1.png' ).then( (texture) => {
+  texture.repeat.set(1, 1);
+    var objMaterial = new THREE.MeshPhongMaterial({
+        map: texture,
+        side: THREE.DoubleSide,
+        shading: THREE.FlatShading,
+        transparent: true,
+      });
+    tree2 = new THREE.Mesh(new THREE.PlaneGeometry( 3 , 3 , 32), objMaterial);
+});
+promise3 = promiseLoader.load( './../Images/tree4.png' ).then( (texture) => {
+  texture.repeat.set(1, 1);
+    var objMaterial = new THREE.MeshPhongMaterial({
+        map: texture,
+        side: THREE.DoubleSide,
+        shading: THREE.FlatShading,
+        transparent: true,
+      });
+    tree3 = new THREE.Mesh(new THREE.PlaneGeometry( 3 , 3 , 32), objMaterial);
+});
+promise4 = promiseLoader.load( './../Images/tree5.png' ).then( (texture) => {
+    texture.repeat.set(1, 1);
+    var objMaterial = new THREE.MeshPhongMaterial({
+        map: texture,
+        side: THREE.DoubleSide,
+        shading: THREE.FlatShading,
+        transparent: true,
+      });
+    tree4 = new THREE.Mesh(new THREE.PlaneGeometry( 3 , 3 , 32), objMaterial);
 });
 
-loader1.load('./../Images/tree1.png', function(texture){
-    texture.repeat.set(times_horizontal, times_vert);
-    var objMaterial = new THREE.MeshPhongMaterial({
-        map: texture,
-        side: THREE.DoubleSide,
-        shading: THREE.FlatShading,
-        transparent: true,
-      });
-    tree2 = new THREE.Mesh(objGeometry, objMaterial);
-});
+Promise.all( [promise1, promise2, promise3, promise4] ).then( () => {
 
-loader1.load('./../Images/tree4.png', function(texture){
-    texture.repeat.set(times_horizontal, times_vert);
-    var objMaterial = new THREE.MeshPhongMaterial({
-        map: texture,
-        side: THREE.DoubleSide,
-        shading: THREE.FlatShading,
-        transparent: true,
-      });
-    tree3 = new THREE.Mesh(objGeometry, objMaterial);
-});
+  treesInit();
 
-loader1.load('./../Images/tree5.png', function(texture){
-    texture.repeat.set(times_horizontal, times_vert);
-    var objMaterial = new THREE.MeshPhongMaterial({
-        map: texture,
-        side: THREE.DoubleSide,
-        shading: THREE.FlatShading,
-        transparent: true,
-      });
-    tree4 = new THREE.Mesh(objGeometry, objMaterial);
 });
 
 function cowsRespawn(start){
@@ -193,7 +175,6 @@ function createSide(floorGeometry,texture,posx, posz){
 
 function treesInit(){
     for(var m = 0; m < max_trees;){
-        if(typeof(tree1) == 'undefined') break;
         var road_side = (Math.random() > 0.5 ? -1 : 1);
         var px = road_side*Math.random()*10 +(road_side == -1 ? -3 : 3);
         var pz = Math.random()*tree_dist + 10;
