@@ -16,15 +16,15 @@ loader.crossOrigin = true;
 
 var loader1 = new THREE.TextureLoader();
 
-function texture_promise(loader , onProgress) {
+function texture_promise(loader2 , onProgress) {
     function promiseLoader(url){
         return new Promise( (resolve, reject) => {
-            loader.load(url, resolve, onProgress, reject);
+            loader2.load(url, resolve, onProgress, reject);
         });
     };
     
     return {
-        originalLoader: loader,
+        originalLoader: loader2,
         load: promiseLoader,
   };
 }
