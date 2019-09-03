@@ -58,6 +58,25 @@ loader.load('./../models/cow/scene.gltf', function(gltf) {
 });
 
 const promiseLoader = texture_promise(new THREE.TextureLoader() );
+promiseLoader.load('./../Images/grass1.jpg').then((texture) => {
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+
+    var times_horizontal = 20; 
+    var times_vert = 80; 
+    var objGeometry = new THREE.PlaneGeometry( SideConfig.SIDE_WIDTH, SideConfig.SIDE_DEPTH , SIDE_RES,SIDE_RES );
+    texture.repeat.set(times_horizontal, times_vert);
+
+    side1 = createSide(objGeometry,texture, 53 , 0);
+    side2 = createSide(objGeometry,texture, -53 , 0);
+    side3 = createSide(objGeometry,texture, 53 , 250);
+    side4 = createSide(objGeometry,texture,-53 , 250);
+
+    scene.add(side1);
+    scene.add(side2);
+    scene.add(side3);
+    scene.add(side4);
+});
 
 promise1 = promiseLoader.load( './../Images/tree.png' ).then( (texture) => {
   texture.repeat.set(1, 1);
