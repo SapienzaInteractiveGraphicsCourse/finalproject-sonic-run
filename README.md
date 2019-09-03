@@ -10,7 +10,7 @@ Go to src, open **index.html** with your browser.
 
 ### Browsers Compatibility
 
-As stated in the report, section 3.1.2, Edge (IE) works fine. Safari can work after disabling the origin restrictions in the Developer Menu. 
+As stated in the report, section 3.1.2, Edge (IE) works fine. Safari and Firefox can work after disabling the origin restrictions in the Developer Menu / Browser Configuration. 
  
 
 ### The game does not save score, internet connection is required only for the libraries used. Problems are most likely related to RAM and Browser comptability. 
